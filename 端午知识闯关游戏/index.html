@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>端午知识闯关 | 传承千年文化</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 音频管理器 -->
+    <script src="audio-manager.js"></script>
+</head>
+<body>
+    <!-- 音频控制按钮 -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn" title="音效开关">
+            <span class="audio-icon">🔊</span>
+        </button>
+    </div>
+    
+    <div class="game-container">
+        <!-- 开始页面 -->
+        <div id="start-page" class="page active">
+            <div class="header">
+                <h1>🐉 端午知识闯关 🐉</h1>
+                <p class="subtitle">穿越千年时光，探寻端午文化密码</p>
+            </div>
+            <div class="dragon-animation">
+                <div class="dragon">🐲</div>
+            </div>
+            <div class="start-content">
+                <p>端午节承载着深厚的历史文化内涵</p>
+                <p>你对端午传统了解多少？</p>
+                <button id="start-btn" class="btn-primary">开始闯关</button>
+            </div>
+        </div>
+
+        <!-- 游戏页面 -->
+        <div id="game-page" class="page">
+            <div class="game-header">
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                <div class="score">得分: <span id="score">0</span></div>
+                <div class="level">第 <span id="current-level">1</span> 关</div>
+            </div>
+            
+            <div class="question-container">
+                <div id="question-image" class="question-image"></div>
+                <h2 id="question-text"></h2>
+                <div id="options" class="options"></div>
+            </div>
+            
+            <div class="game-footer">
+                <button id="hint-btn" class="btn-secondary">💡 提示</button>
+            </div>
+        </div>
+
+        <!-- 结果页面 -->
+        <div id="result-page" class="page">
+            <div class="result-content">
+                <div id="result-icon" class="result-icon"></div>
+                <h2 id="result-title"></h2>
+                <div id="final-score" class="final-score"></div>
+                <div id="result-message" class="result-message"></div>
+                <div class="knowledge-card">
+                    <h3>🎓 端午小知识</h3>
+                    <p id="knowledge-text"></p>
+                </div>
+                <div class="action-buttons">
+                    <button id="restart-btn" class="btn-primary">再次挑战</button>
+                    <button id="share-btn" class="btn-secondary">分享成绩</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示弹窗 -->
+    <div id="hint-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>💡 小提示</h3>
+            <p id="hint-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
